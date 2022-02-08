@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+ <script language="JavaScript">
+    function calcule(form) {
+        var lg1 = eval(form.Length1.value);
+        if (lg1 > 0) {
+            lg1 = lg1 * eval(form.L1U.value);
+            var l1 = eval(form.Width1.value) * eval(form.La1U.value);
+            l1 = (l1 + lg1) * 2;
+            var h1 = eval(form.Width4.value) * eval(form.La4U.value);
+            var p1 = eval(form.Epaisseur1.value) * eval(form.E1U.value);
+        } else {
+            var h1 = eval(form.Width1.value) * eval(form.La1U.value);
+            var l1 = eval(form.Width4.value) * eval(form.La4U.value);
+            var p1 = eval(form.Epaisseur1.value) * eval(form.E1U.value);
+        }
+        var lg2 = eval(form.Length2.value);
+        if (lg2 > 0) {
+            lg2 = lg2 * eval(form.L2U.value);
+            var l2 = eval(form.Width2.value) * eval(form.La2U.value);
+            l2 = (l2 + lg2) * 2;
+            var h2 = eval(form.Hauteur2.value) * eval(form.H2U.value);
+            var p2 = eval(form.Epaisseur2.value) * eval(form.E2U.value);
+        } else {
+            var h2 = eval(form.Width2.value) * eval(form.La2U.value);
+            var l2 = eval(form.Hauteur2.value) * eval(form.H2U.value);
+            var p2 = eval(form.Epaisseur2.value) * eval(form.E2U.value);
+        }
+        var l3 = eval(form.Length3.value) * eval(form.L3U.value);
+        var h3 = eval(form.Width3.value) * eval(form.La3U.value);
+        var p3 = eval(form.Epaisseur3.value) * eval(form.E3U.value);
+        var r4 = eval(form.Rayon4.value) * eval(form.R4U.value);
+        var l4 = eval(form.Longueur4.value) * eval(form.L4U.value);
+        var q4 = eval(form.Quantite4.value);
+        with (Math) {
+            ttl1 = (Math.round((l1 * h1 * p1 * 100) + .499)) / 100;
+            ttl2 = (Math.round((l2 * h2 * p2 * 100) + .499)) / 100;
+            ttl3 = (Math.round((l3 * h3 * p3 * 100) + .499)) / 100;
+            ttl4 = (Math.round(PI * Math.pow(r4, 2) * l4 * q4) * 100) / 100;
+            total = ttl1 + ttl2 + ttl3 + ttl4;
+        }
+        form.Reponse1.value = ttl1;
+        form.Reponse2.value = ttl2;
+        form.Reponse3.value = ttl3;
+        form.Reponse4.value = ttl4;
+        form.TOTAL.value = (Math.round(total * 100)) / 100;
+    }
+</script>
+<form>
+    <div class="container">
+        <!-- SOLE ROW -->
+        <div class="row calculator-row">
+            <div class="col-md-1">
+                <p class="custom5">Semelle</p>
+            </div>
+            <div class="col-md-3">
+                <label class="custom5">Longueur de la bâtisse</label>
+                <input class="form-control" maxlength="16" name="Length1" type="text" value="0">
+                <select class="form-control" name="L1U">
+                    <option value="0.0254">pouce </option>
+                    <option selected value="0.3048">pied </option>
+                    <option value="1">mètre </option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="custom5">Largeur de la bâtisse</label>
+                <input class="form-control" maxlength="16" name="Width1" size="10" type="text" value="0">
+                <select class="form-control" name="La1U">
+                    <option value="0.0254">pouce </option>
+                    <option selected value="0.3048">pied </option>
+                    <option value="1">mètre </option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="custom5">Largeur de la semelle</label>
+                <input class="form-control" maxlength="16" name="Width4" size="10" type="text" value="0">
+                <select class="form-control" name="La4U">
+                    <option value="0.0254">pouce </option>
+                    <option value="0.3048">pied </option>
+                    <option value="1">mètre </option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="custom5">Épaisseur de la semelle</label>
+                <input class="form-control" maxlength="16" name="Epaisseur1" size="10" type="text" value="0">
+                <select class="form-control" name="E1U">
+                    <option value="0.0254">pouce </option>
+                    <option value="0.3048">pied </option>
+                    <option value="1">mètre </option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="custom5">Total</label>
+                <div class="input-group content">
+                    <input class="form-control" maxlength="16" name="Reponse1" size="10" type="text">
+                </div>
+            </div>
+        </div>
+        <!-- SOLE ROW END -->
+        <!-- Walls ROW -->
+        <div class="row calculator-row">
+            <div class="col-md-1">
+                <p class="custom5">Mur(s)</p>
+            </div>
+            <div class="col-md-3">
+                <label class="custom5" l>Longueur de la bâtisse</label>
+                <input class="form-control" maxlength="16" name="Length2" size="10" type="text" value="0">
+                <select class="form-control" name="L2U">
+                    <option value="0.0254">pouce </option>
+                    <option selected value="0.3048">pied </option>
+                    <option value="1">mètre </option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="custom5">Largeur de la bâtisse</label>
+                <input class="form-control" maxlength="16" name="Width2" size="10" type="text" value="0">
+                <select class="form-control" name="La2U">
+                    <option value="0.0254">pouce </option>
+                    <option selected value="0.3048">pied </option>
+                    <option value="1">mètre </option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="custom5">Hauteur des murs</label>
+                <input class="form-control" maxlength="16" name="Hauteur2" size="10" type="text" value="0">
+                <select class="form-control" name="H2U">
+                    <option value="0.0254">pouce </option>
+                    <option selected value="0.3048">pied </option>
+                    <option value="1">mètre </option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="custom5">Épaisseur des murs</label>
+                <input class="form-control" maxlength="16" name="Epaisseur2" size="10" type="text" value="0">
+                <select class="form-control" name="E2U">
+                    <option value="0.0254">pouce </option>
+                    <option value="0.3048">pied </option>
+                    <option value="1">mètre </option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="custom5">Total</label>
+                <div class="input-group content">
+                    <input class="form-control" maxlength="16" name="Reponse2" size="10" type="text">
+                </div>
+            </div>
+        </div>
+        <!-- Walls ROW END -->
+        <!-- Floors ROW -->
+        <div class="row calculator-row">
+            <div class="col-md-1">
+                <p class="custom5">Plancher</p>
+            </div>
+            <div class="col-md-3">
+                <label class="custom5">Longueur de la bâtisse</label>
+                <input class="form-control" maxlength="16" name="Length3" size="10" type="text" value="0">
+                <select class="form-control" class="form-control" name="L3U">
+                    <option value="0.0254">pouce </option>
+                    <option selected value="0.3048">pied </option>
+                    <option value="1">mètre </option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label class="custom5">Largeur de la bâtisse</label>
+                <input class="form-control" maxlength="16" name="Width3" size="10" type="text" value="0">
+                <select class="form-control" name="La3U">
+                    <option value="0.0254">pouce </option>
+                    <option selected value="0.3048">pied </option>
+                    <option value="1">mètre </option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label class="custom5">Épaisseur du plancher</label>
+                <input class="form-control" maxlength="16" name="Epaisseur3" size="10" type="text" value="0">
+                <select class="form-control" name="E3U">
+                    <option value="0.0254">pouce </option>
+                    <option value="0.3048">pied </option>
+                    <option value="1">mètre </option>
+                    <option value="0.01">cm </option>
+                </select>
+            </div>
+            <div class="col-md-2">
+                <label class="custom5">Total</label>
+                <div class="input-group content">
+                    <input class="form-control" maxlength="16" name="Reponse3" size="10" type="text">
+                </div>
+            </div>
+        </div>
+        <!-- Walls ROW END -->
+        <!-- Sonotube(s) -->
+        <div class="row calculator-row">
+            <div class="col-md-1">
+                <p class="custom5">Sonotube</p>
+            </div>
+            <div class="col-md-3">
+                <label class="custom5">Rayon</label>
+                <input class="form-control" maxlength="16" name="Rayon4" size="10" type="text" value="0">
+                <select class="form-control" name="R4U">
+                    <option value="0.0254">pouce </option>
+                    <option selected value="0.3048">pied </option>
+                    <option value="1">mètre </option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label class="custom5">Longueur</label>
+                <input class="form-control" maxlength="16" name="Longueur4" size="10" type="text" value="0">
+                <select class="form-control" name="L4U">
+                    <option value="0.0254">pouce </option>
+                    <option selected value="0.3048">pied </option>
+                    <option value="1">mètre </option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <label class="custom5">Quantité</label>
+                <input class="form-control" maxlength="16" name="Quantite4" size="10" type="text" value="0">
+            </div>
+            <div class="col-md-2">
+                <label class="custom5">Total</label>
+                <div class="input-group">
+                    <input class="form-control" maxlength="16" name="Reponse4" size="10" type="text">
+                </div>
+            </div>
+        </div>
+        <!-- Sonotube(s) END -->
+        <!-- SOLE ROW -->
+        <div class="row calculator-row">
+            <div class="col-md-4 calc-btn-position">
+                <button onclick="calcule(this.form)" type="button" value="Calculate" class="btn btn-primary">Calculer</button>
+                <button type="reset" class="btn btn-secondary">Effacer</button>
+            </div>
+        </div>
+        <div class="row calculator-row">
+            <div class="col-md-2 calc-result">
+                <label class="custom5">
+                    Total en m<sup>3</sup>
+                </label>
+                <input class="form-control" name="TOTAL" size="10" type="text">
+            </div>
+        </div>
+    </div>
+    <!-- SOLE ROW END -->
+</form>
+</body>
+</html>
