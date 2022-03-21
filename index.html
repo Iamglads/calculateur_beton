@@ -9,64 +9,67 @@
 </head>
 <body>
    <main>     
+  
+ 
+ <form>     
     <!--SEMELLE-->
     <h2>Semelle</h2>
     <div class="container semelle">
         <div class="container_wrappe">
             <div class="main_content semelle_content">
-                <form class="batisse">
+                <div class="batisse">
                     <div class="content">
                         <h4 class="title">Longueur de la bâtisse</h4>
                         <div style="display: flex">
-                            <input type="number" value="00.00" class="longueur_batisse">
-                            <select name="pieds" id="select_longueur_batisse">
-                                <option value="0,3048">pied</option>
-                                <option value="1">mètre</option>
-                                <option value="0,0254">pouce</option>
+                            <input class="form-control" maxlength="16" name="Length1" type="number" value="0">
+                            <select class="form-control" name="L1U">
+                                <option value="0.0254">pouce </option>
+                                <option selected  value="0.3048">pied </option>
+                                <option value="1">mètre </option>
                             </select>
                         </div>
                     </div>
                     <div class="content">
                         <h4 class="title">Largeur de la bâtisse</h4>
                         <div style="display: flex">
-                            <input type="number" value="00.00" class="largeur_batisse">
-                            <select name="pieds" id="select_largeur_batisse">
-                                <option value="0,3048">pied</option>
-                                <option value="1">mètre</option>
-                                <option value="0,0254">pouce</option>
+                            <input class="form-control" maxlength="16" name="Width1" size="10" type="number" value="0">
+                            <select class="form-control" name="La1U">
+                                <option value="0.0254">pouce </option>
+                                <option selected  value="0.3048">pied </option>
+                                <option value="1">mètre </option>
                             </select>
                         </div>
                     </div>
-                </form>
-                <form class="semelle">
+                </div>
+                <div class="semelle">
                     <div class="content">
                         <h4 class="title">largeur de la semelle</h4>
                         <div style="display: flex">
-                            <input type="number" value="00.00" class="largeur_semelle">
-                            <select name="pieds" id="select_largeur_semelle">
-                                <option value="0,3048">pied</option>
-                                <option value="1">mètre</option>
-                                <option value="0,0254">pouce</option>
+                            <input class="form-control" maxlength="16" name="Width4" size="10" type="number" value="0">
+                            <select class="form-control" name="La4U">
+                                <option selected value="0.0254">pouce </option>
+                                <option value="0.3048">pied </option>
+                                <option value="1">mètre </option>
                             </select>
                         </div>
                     </div>
                     <div class="content">
                         <h4 class="title">Épaisseur de la semelle</h4>
                         <div style="display: flex;">
-                            <input type="number" value="00.00" class="epaisseur_semelle">
-                            <select name="pieds" id="select_epaisseur_semelle">
-                                <option value="0,3048">pied</option>
-                                <option value="1">mètre</option>
-                                <option value="0,0254">pouce</option>
+                            <input class="form-control" maxlength="16" name="Epaisseur1" size="10" type="number" value="0">
+                            <select class="form-control" name="E1U">
+                                <option selected value="0.0254">pouce </option>
+                                <option value="0.3048">pied </option>
+                                <option value="1">mètre </option>
                             </select>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
             <div class="container_totaux">
                 <div>
                     <h4 class="total">Total</h4>
-                    <input type="number" value="00.00" class="total_semelle">
+                    <input type="number" value="00.00" maxlength="16" name="resultTotalSemelle" class="total_semelle">
                 </div>
             </div>
         </div>
@@ -77,59 +80,59 @@
     <div class="container murs">
         <div class="container_wrappe">
             <div class="main_content murs_content">
-                <form class="batisse">
+                <div class="batisse">
                     <div class="content">
                         <h4 class="title">Longueur de la bâtisse</h4>
                         <div style="display: flex">
-                            <input type="number" value="00.00" class="longueur_batisse_murs">
-                            <select name="pieds" id="select_longueur_batisse_murs">
-                                <option value="0,3048">pied</option>
-                                <option value="1">mètre</option>
-                                <option value="0,0254">pouce</option>
+                            <input class="form-control" maxlength="16" name="Length2" size="10" type="number" value="0">
+                            <select class="form-control" name="L2U">
+                                <option value="0.0254">pouce </option>
+                                <option selected value="0.3048">pied </option>
+                                <option value="1">mètre </option>
                             </select>
                         </div>
                     </div>
                     <div class="content">
                         <h4 class="title">Largeur de la bâtisse</h4>
                         <div style="display: flex">
-                            <input type="number" value="00.00" class="largeur_batisse_murs">
-                            <select name="pieds" id="select_largeur_batisse_murs">
-                                <option value="0,3048">pied</option>
-                                <option value="1">mètre</option>
-                                <option value="0,0254">pouce</option>
+                            <input class="form-control" maxlength="16" name="Width2" size="10" type="number" value="0">
+                            <select class="form-control" name="La2U">
+                                <option value="0.0254">pouce </option>
+                                <option selected  value="0.3048">pied </option>
+                                <option value="1">mètre </option>
                             </select>
                         </div>
                     </div>
-                </form>
-                <form class="semelle">
+                </div>
+                <div class="semelle">
                     <div class="content">
                         <h4 class="title">Hauteur des murs</h4>
                         <div style="display: flex">
-                            <input type="number" value="00.00" class="hauteur_murs">
-                            <select name="pieds" id="select_hauteur_murs">
-                                <option value="0,3048">pied</option>
-                                <option value="1">mètre</option>
-                                <option value="0,0254">pouce</option>
+                            <input class="form-control" maxlength="16" name="Hauteur2" size="10" type="number" value="0">
+                            <select class="form-control" name="H2U">
+                                <option value="0.0254">pouce </option>
+                                <option selected  value="0.3048">pied </option>
+                                <option value="1">mètre </option>
                             </select>
                         </div>
                     </div>
                     <div class="content">
                         <h4 class="title">Épaisseur des murs</h4>
                         <div style="display: flex;">
-                            <input type="number" value="00.00" class="epaisseur_murs">
-                            <select name="pieds" id="select_epaisseur_murs">
-                                <option value="0,3048">pied</option>
-                                <option value="1">mètre</option>
-                                <option value="0,0254">pouce</option>
+                            <input class="form-control" maxlength="16" name="Epaisseur2" size="10" type="number" value="0">
+                            <select class="form-control" name="E2U">
+                                <option selected value="0.0254">pouce </option>
+                                <option value="0.3048">pied </option>
+                                <option value="1">mètre </option>
                             </select>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
             <div class="container_totaux">
                 <div>
                     <h4 class="total">Total</h4>
-                    <input type="number" value="00.00" class="total_murs">
+                    <input type="number" value="00.00" class="total_murs" maxlength="16" name="resultTotalMurs">
                 </div>
             </div>
         </div>
@@ -140,59 +143,49 @@
     <div class="container plancher">
         <div class="container_wrappe">
             <div class="main_content plancher_content">
-                <form class="batisse">
+                <div class="batisse">
                     <div class="content">
                         <h4 class="title">Longueur de la bâtisse</h4>
                         <div style="display: flex">
-                            <input type="number" value="00.00" class="longueur_batisse_murs">
-                            <select name="pieds" id="">
-                                <option value="0,3048">pied</option>
-                                <option value="1">mètre</option>
-                                <option value="0,0254">pouce</option>
+                            <input class="form-control" maxlength="16" name="Length3" type="number" value="0">
+                            <select class="form-control"  name="L3U">
+                                <option value="0.0254">pouce </option>
+                                <option selected  value="0.3048">pied </option>
+                                <option value="1">mètre </option>
                             </select>
                         </div>
                     </div>
                     <div class="content">
                         <h4 class="title">Largeur de la bâtisse</h4>
                         <div style="display: flex">
-                            <input type="number" value="00.00" class="largeur_batisse_murs">
-                            <select name="pieds" id="">
-                                <option value="0,3048">pied</option>
-                                <option value="1">mètre</option>
-                                <option value="0,0254">pouce</option>
+                            <input class="form-control" maxlength="16" name="Width3" type="number" value="0">
+                            <select class="form-control" name="La3U">
+                                <option value="0.0254">pouce </option>
+                                <option selected value="0.3048">pied </option>
+                                <option value="1">mètre </option>
                             </select>
                         </div>
                     </div>
-                </form>
-                <form class="semelle">
+                </div>
+                <div class="semelle">
                     <div class="content">
-                        <h4 class="title">Hauteur des murs</h4>
+                        <h4 class="title">Épaisseur du plancher</h4>
                         <div style="display: flex">
-                            <input type="number" value="00.00" class="hauteur_murs">
-                            <select name="pieds" id="">
-                                <option value="0,3048">pied</option>
-                                <option value="1">mètre</option>
-                                <option value="0,0254">pouce</option>
+                            <input class="form-control" maxlength="16" name="Epaisseur3" type="number" value="0">
+                            <select class="form-control" name="E3U">
+                                <option value="0.0254">pouce </option>
+                                <option selected value="0.3048">pied </option>
+                                <option value="1">mètre </option>
+                                <option value="0.01">cm </option>
                             </select>
                         </div>
                     </div>
-                    <div class="content">
-                        <h4 class="title">Épaisseur des murs</h4>
-                        <div style="display: flex;">
-                            <input type="number" value="00.00" class="epaisseur_murs">
-                            <select name="pieds" id="">
-                                <option value="0,3048">pied</option>
-                                <option value="1">mètre</option>
-                                <option value="0,0254">pouce</option>
-                            </select>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
             <div class="container_totaux">
                 <div>
                     <h4 class="total">Total</h4>
-                    <input type="number" value="00.00" class="total_semelle">
+                    <input type="number" value="00.00" class="total_semelle" maxlength="16" name="resultTotalPlancher">
                 </div>
             </div>
         </div>
@@ -202,53 +195,313 @@
     <div class="container sonotube">
         <div class="container_wrappe">
             <div class="main_content sonotube_content">
-                <form class="batisse">
+                <div class="batisse">
                     <div class="content">
                         <h4 class="title">Rayon</h4>
                         <div style="display: flex">
-                            <input type="number" value="00.00" class="longueur_batisse_murs">
-                            <select name="pieds" id="">
-                                <option value="0,3048">pied</option>
-                                <option value="1">mètre</option>
-                                <option value="0,0254">pouce</option>
+                            <input class="form-control" maxlength="16" name="rayonSonotube" size="10" type="number" value="0">
+                            <select class="form-control" name="R4U">
+                                <option selected value="0.0254">pouce </option>
+                                <option value="0.3048">pied </option>
+                                <option value="1">mètre </option>
                             </select>
                         </div>
                     </div>
                     <div class="content">
                         <h4 class="title">Longueur</h4>
                         <div style="display: flex">
-                            <input type="number" value="00.00" class="largeur_batisse_murs">
-                            <select name="pieds" id="">
-                                <option value="0,3048">pied</option>
-                                <option value="1">mètre</option>
-                                <option value="0,0254">pouce</option>
+                            <input class="form-control" maxlength="16" name="Longueur4" size="10" type="number" value="0">
+                            <select class="form-control" name="L4U">
+                                <option value="0.0254">pouce </option>
+                                <option selected value="0.3048">pied </option>
+                                <option value="1">mètre </option>
                             </select>
                         </div>
                     </div>
-                </form>
-                <form class="semelle">
+                </div>
+                <div class="semelle">
                     <div class="content">
                         <h4 class="title">Quantité</h4>
                         <div style="display: flex">
-                            <input type="number" value="00.00" class="hauteur_murs">
-                            <select name="pieds" id="">
-                                <option value="0,3048">pied</option>
-                                <option value="1">mètre</option>
-                                <option value="0,0254">pouce</option>
-                            </select>
+                            <input class="form-control" maxlength="16" name="Quantite4" size="10" type="number" value="0">
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
             <div class="container_totaux">
                 <div>
                     <h4 class="total">Total</h4>
-                    <input type="number" value="00.00" class="total_sonotube">
+                    <input type="number" value="00.00" class="total_sonotube" maxlength="16" name="resultTotalSonotube" size="10">
                 </div>
             </div>
         </div>
     </div>
+    <div class="buttons">
+        <div class="wrappe">
+            <button type="reset" class="btn btn-clear">Effacer</button>
+            <button onclick="calcule(this.form)" type="button" value="Calculate" class="btn btn-calculate">Calculer</button>
+        </div>
+    </div>
+    <div class="container_result">
+        <div class="wrappe">
+            <label>
+                Total en m<sup>3</sup>
+            </label>
+            <input name="resultTotalAll" size="10" type="number" value="0.00">
+        </div>
+    </div>
     <!--SONOTUBE FIN-->
+</form>
+
+<style>
+  
+
+
+h2 {
+  text-align: center;
+}
+
+.title {
+  font-size: 12px;
+  margin-right: 10px;
+  font: normal normal medium 20px Rubik;
+  color: #424242;
+}
+@media screen and (max-width: 599px) {
+  .title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+
+input,
+select {
+  border: none !important;
+  background: #e6eaf8;
+  text-align: right;
+  padding: 10px;
+  width: 120px;
+}
+@media screen and (max-width: 599px) {
+  input {
+      width: 70%;
+  }
+}
+input:focus, button:focus{
+    outline: 1px solid  #00529e !important;
+}
+ button:focus{
+    outline: none !important;
+}
+select:focus {
+    outline: none !important;
+}
+
+select {
+  width: 80px;
+  text-align: left;
+  background: #f4f6fc;
+  font-size: 12px
+}
+@media screen and (max-width: 599px) {
+  select {
+      width: 30%;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0px 3px 6px #00000029;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.container h2 {
+  font: normal normal bold 35px/40px Rubik;
+  letter-spacing: 0px;
+  color: #424242;
+  opacity: 1;
+}
+.container input,
+.container h4,
+.container h3 {
+  font-family: "Rubik", Sans-serif;
+  text-align: center !important;
+}
+
+.container_wrappe {
+  width: 100%;
+  display: flex;
+}
+.container_wrappe .main_content {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+@media screen and (max-width: 599px) {
+  .container_wrappe .main_content {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .container_wrappe {
+    display: block;
+  }
+}
+
+.container_totaux {
+  width: 30%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f6fc;
+  padding: 1em;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+@media screen and (max-width: 599px) {
+  .container_totaux {
+      border-top-right-radius: 0px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+}
+
+.container_totaux .total {
+  text-align: center;
+  color: #00529e;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Rubik", Sans-serif;
+}
+.container_totaux input {
+  color: #00529e;
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+}
+@media screen and (max-width: 599px) {
+  .container_totaux {
+    width: 100%;
+  }
+  
+  .container_totaux input {
+      width: 100%;
+  }
+}
+
+.buttons {
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+  
+.buttons button {
+    font-size: 16px;
+      border: none;
+      padding: 8px 30px;
+      text-transform: capitalize;
+      cursor: pointer;
+      font: normal normal medium 22px/27px Rubik;
+     margin-bottom: 20px;
+     font-family: "Rubik", Sans-serif;
+     font-size: 16px;
+     text-transform: uppercase
+}
+
+@media screen and (max-width: 599px) {
+  .buttons button {
+   width: 100%;
+}
+}
+
+
+.buttons .btn-calculate {
+  background: #00529e !important;
+  border: 1px solid #00529e !important;
+  color: #fff;
+}
+.buttons .btn-calculate:hover {
+  border: 1px solid #00529e !important;
+  background: none !important;
+  color: #00529e !important;
+}
+.buttons .btn-clear {
+  background-color: #b3b3b3 !important;
+  color: #313131 !important;
+}
+.buttons .btn-clear:hover {
+  border: 1px solid black;
+  background: transparent !important;
+  color: black;
+}
+
+.container_result {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.container_result .wrappe {
+  width: 400px;
+  padding: 3em;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 0px 3px 6px #00000029;
+  height: auto;
+  padding: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container_result .wrappe label {
+  text-align: center;
+  font: normal normal bold 20px Rubik;
+  letter-spacing: 0px;
+  color: #00529e;
+  margin-bottom: 20px;
+}
+.container_result .wrappe input {
+  color: #00529e;
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.total_semelle {
+    
+}
+
+select {
+    appearance: menuList !important;
+}
+
+
+</style>
+
+<script language="JavaScript">
+    
+</script>
    </main>
    <script src="calculateur.js"></script>
 </body>
